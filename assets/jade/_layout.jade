@@ -1,0 +1,25 @@
+include templates/_global_vars
+include templates/_global_mixins
+include templates/_project_mixins
+include templates/_project_vars
+- var array = '';
+block vars
+doctype
+html(lang="ru")
+	head
+		+head(array)
+	body
+		#main_container.main_container
+			.loader_area
+				.loader_logo
+					img(src="i/logo.svg" width="350" height="270" alt="Лого SiteHere.ru" style="margin:0 auto;display:block;")
+				.loader
+					svg.loader_inner(width="60px" height="60px" viewBox="0 0 80 80")
+						path(class="loader_circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z")
+						path(id="loader_circle" class="loader_circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z")
+			#wrapper
+				+header
+				#main(class='#{array.layuot_mod}')
+					block content_block
+				+footer
+		+scripts

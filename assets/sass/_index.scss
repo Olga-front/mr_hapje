@@ -1,0 +1,466 @@
+// intro section
+.intro {
+	position: relative;
+	margin-bottom: 3.3rem;
+	.img_holder {
+		margin: 0 -9999px;
+		text-align: center;
+		background-color: #fcad10;
+		height: 41.3rem;
+		overflow: hidden;
+		img {
+			margin: -2rem -33.3rem 0 0;
+		}
+	}
+	.text_holder {
+		position: absolute;
+		top: 29.3%;
+		left: 0;
+		.text_amp {
+			font-size: em(140);
+			line-height: em(114, 140);
+			color: #fff;
+			opacity: 0.4;
+			font-family: 'BlendaScript', Arial, Helvetica, sans-serif;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: -3.4rem;
+		}
+		h1 {
+			font-size: em(49);
+			line-height: em(45, 49);
+			color: #fff;
+			max-width: 30rem;
+			display: inline-block;
+			vertical-align: middle;
+			font-weight: 900;
+			font-style: italic;
+			margin: 0;
+		}
+	}
+}
+//services section
+.services {
+	padding: 6rem 0 4.3rem;
+}
+.about_area {
+	background-color: #f9e9ca;
+	text-align: center;
+	padding: 4.8rem 7rem 5.1rem;
+	margin: 0 0 9.3rem;
+	h2 {
+		margin-bottom: 1.5rem;
+	}
+	p {
+		line-height: em(30, 18);
+		margin-bottom: 0;
+	}
+}
+.services_tabset {
+	background-color: #c70b0b;
+	color: #fff;
+	max-width: 79.8rem;
+	margin: 0 auto;
+	padding: 4.2rem 10rem 4.4rem;
+	p {
+		margin-bottom: 0;
+		& + p {
+			margin-top: 1rem;
+		}
+	}
+	ul {
+		@include reset-ul;
+		font-size: em(19);
+		font-weight: 700;
+		text-align: center;
+		padding: 0 0 2.3rem;
+		li {
+			padding: 0 2.5rem;
+			display: inline-block;
+			vertical-align: top;
+			&.active {
+				a {
+					border-bottom-color: #fff;
+				}
+			}
+		}
+		a {
+			color: #fff;
+			border-bottom: 1px solid transparent;
+			&:hover {
+				border-bottom-color: #fff;
+			}
+		}
+	}
+}
+// menu section
+.menu_section {
+	h1 {
+		color: #eab9b9;
+		font-size: em(100);
+		font-weight: 600;
+		text-align: center;
+		margin: 0 0 -.5rem;
+	}
+}
+.menu_items {
+	@include clearfix;
+	margin: 0 -2.5rem;
+	padding: 0 0 10.3rem;
+}
+.menu_item {
+	float: left;
+	width: calc(50% - 5rem);
+	margin: 2.5rem;
+	position: relative;
+	p {
+		margin-bottom: .5rem;
+	}
+	&:nth-child(2) {
+		.menu_item_frame{
+			padding-top: 7.5rem;
+		}
+	}
+	&:last-child {
+		.menu_item_holder {
+			p {
+				max-width: 23rem;
+			}
+		}
+	}
+	&:nth-child(even) {
+		float: right;
+		h2 {
+			margin-right: -5rem;
+		}
+	}
+	.menu_item_holder {
+		@include box-shadow(0 0 40px rgba(0, 0, 0, 0.1));
+		background-color: #fff;
+		padding: 4rem 7.3rem 4rem 4.8rem;
+	}
+	.price {
+		display: block;
+		opacity: 0.2;
+	}
+}
+.img_pizza {
+	position: absolute;
+	bottom: em(-12);
+	right: em(-42);
+	max-width: em(156);
+	img {
+		@include transform(rotate(59deg));
+	}
+}
+.img_burger {
+	position: absolute;
+	top: em(-6);
+	right: em(-19);
+	max-width: em(161);
+}
+.img_beer_1 {
+	position: absolute;
+	bottom: em(-136);
+	right: em(93);
+	z-index: 2;
+	max-width: em(129);
+}
+.img_beer_2 {
+	position: absolute;
+	bottom: em(-104);
+	right: em(26);
+	max-width: em(119);
+	z-index: 1;
+}
+.img_fries_1 {
+	position: absolute;
+	bottom: em(-36);
+	right: em(-5);
+	max-width: em(234);
+}
+.img_fries_2 {
+	position: absolute;
+	bottom: em(131);
+	right: em(8);
+	max-width: em(46);
+}
+.img_fries_3 {
+	position: absolute;
+	bottom: em(69);
+	right: em(-43);
+	max-width: em(80);
+}
+.book_text_area {
+	max-width: 80rem;
+	text-align: center;
+	background-color: #c70b0b;
+	padding: 4.9rem 3rem 5.5rem;
+	margin: 0 auto 4.6rem;
+	p {
+		font-size: em(45);
+		color: #fff;
+		font-weight: 600;
+	}
+}
+.slick_gallery {
+	.img_holder {
+		padding: .9rem;
+		a{
+			@include transition();
+			display: block;
+			&:hover,
+			&:focus{
+				@include transform(scale(1.05));
+			}
+		}
+	}
+	img {
+		height: 36rem;
+	}
+}
+.gallery {
+	padding: 4rem 0;
+}
+.contact {
+	padding: 2.4rem 0;
+	h1 {
+		color: #eab9b9;
+		font-size: em(100);
+		line-height: em(117, 100);
+		font-weight: 600;
+		text-align: center;
+		margin: 0 0 1.8rem;
+	}
+}
+@media screen and (max-width:$point_2) {
+	.intro {
+		margin-bottom: 2rem;
+	}
+	.services {
+		padding: 4rem 0 3rem;
+	}
+	.about_area {
+		margin-bottom: 6rem;
+	}
+	.menu_section {
+		h1 {
+			font-size: 5em;
+			margin-bottom: 2rem;
+		}
+	}
+	.menu_items {
+		margin: 0 -1rem;
+	}
+	.menu_item {
+		margin: 1rem;
+		width: calc(50% - 2rem);
+		&:nth-child(2) {
+			h2 {
+				max-width: 25rem;
+			}
+		}
+	}
+	.img_pizza {
+		bottom: em(-5);
+		right: em(-30);
+		max-width: em(130);
+	}
+	.img_burger {
+		top: em(-76);
+		right: em(-19);
+		max-width: em(140);
+	}
+	.img_beer_1 {
+		bottom: em(-116);
+		right: em(73);
+		max-width: em(109);
+	}
+	.img_beer_2 {
+		bottom: em(-84);
+		right: em(26);
+		max-width: em(99);
+	}
+	.img_fries_1 {
+		bottom: em(-56);
+		right: em(-5);
+		max-width: em(200);
+	}
+	.img_fries_2 {
+		bottom: em(81);
+		right: em(35);
+		max-width: em(26);
+	}
+	.img_fries_3 {
+		bottom: em(49);
+		right: em(-5);
+		max-width: em(40);
+	}
+	.book_text_area {
+		margin-bottom: 3rem;
+	}
+	.gallery {
+		padding: 3rem 0;
+	}
+	.contact {
+		h1 {
+			font-size: 5em;
+			margin-bottom: 2rem;
+		}
+	}
+	.slick_gallery {
+		&:hover {
+			.slick-arrow {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		.slick-arrow {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+@media screen and (max-width:$point_3) {
+	.intro {
+		background-color: #fcad10;
+		margin: 0 -1.5rem;
+		.text_holder {
+			position: static;
+			max-width: 26rem;
+			margin: 0 auto;
+			padding: 4rem 0 3rem;
+			h1 {
+				max-width: 20rem;
+				font-size: em(40);
+				line-height: em(40, 40);
+			}
+		}
+		.img_holder {
+			margin: 0;
+			height: auto;
+			img {
+				max-width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	.services {
+		padding: 2rem 0 0;
+		margin: 0 -1.5rem;
+	}
+	.about_area {
+		padding: 2rem 1.5rem;
+		margin-bottom: 2rem;
+	}
+	.services_tabset {
+		padding: 2rem 1.5rem;
+		ul {
+			font-size: 1.5rem;
+			margin: 0 -1rem;
+			padding-bottom: 1.5rem;
+			li {
+				padding: 0 .5rem;
+			}
+		}
+	}
+	.menu_section {
+		padding-top: 2rem;
+		h1 {
+			font-size: em(70);
+			line-height: em(70, 70);
+			margin-bottom: 2rem;
+		}
+	}
+	.menu_items {
+		margin: 0;
+		padding-bottom: 1rem;
+	}
+	.menu_item {
+		margin: 0 0 2.5rem;
+		width: 100%;
+		&:nth-child(2){
+			.menu_item_frame{
+				padding-top: 0;
+			}
+		}
+		.menu_item_holder {
+			padding: 2rem 2.5rem 4.6rem;
+		}
+		&:nth-child(2) {
+			margin-top: 0;
+		}
+	}
+	.img_pizza {
+		@include transform(rotate(59deg));
+		position: absolute;
+		bottom: em(-6);
+		right: em(-20);
+		max-width: em(100);
+	}
+	.img_burger {
+		position: absolute;
+		top: auto;
+		bottom: em(-26);
+		right: em(-19);
+		max-width: em(100);
+	}
+	.img_beer_1 {
+		position: absolute;
+		bottom: em(-50);
+		right: em(43);
+		z-index: 2;
+		max-width: em(80);
+	}
+	.img_beer_2 {
+		position: absolute;
+		bottom: em(-28);
+		right: em(6);
+		max-width: em(70);
+		z-index: 1;
+	}
+	.img_fries_1 {
+		position: absolute;
+		bottom: em(-36);
+		right: em(-5);
+		max-width: em(160);
+	}
+	.img_fries_2 {
+		position: absolute;
+		bottom: em(70);
+		right: em(8);
+		max-width: em(26);
+	}
+	.img_fries_3 {
+		position: absolute;
+		bottom: em(49);
+		right: em(-13);
+		max-width: em(40);
+	}
+	.book_text_area {
+		margin: 0 -1.5rem;
+		padding: 3rem 1.5rem;
+		p {
+			font-size: em(30);
+			line-height: em(36, 30);
+			max-width: 25rem;
+			margin: 0 auto 2rem;
+		}
+	}
+	.gallery {
+		padding: 2rem 0 0;
+	}
+	.slick_gallery {
+		img {
+			height: 26rem;
+		}
+	}
+	.contact {
+		padding: 2rem 0 0;
+		h1 {
+			font-size: em(70);
+			line-height: em(70, 70);
+			margin-bottom: 2rem;
+		}
+	}
+}

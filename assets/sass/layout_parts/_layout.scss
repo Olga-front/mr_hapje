@@ -1,0 +1,78 @@
+// common styles
+#wrapper {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	padding-top: 12.5rem;
+}
+.center_holder {
+	max-width: 108.1rem;
+	margin: 0 auto;
+	padding: 0 6.7rem;
+}
+#main {
+	position: relative;
+	padding-bottom: 4rem;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	image-rendering: optimizeSpeed;
+}
+p {
+	&.no_margin {
+		margin: 0;
+	}
+}
+.pull_right {
+	float: right;
+}
+.pull_left {
+	float: left;
+}
+body {
+	&.fixed {
+		height: 100%;
+		overflow: hidden;
+		padding-right: 17px;
+		#header {
+			overflow-y: scroll;
+		}
+	}
+}
+@media screen and (max-width:$point_2) {
+	#wrapper {
+		padding-top: 8.5rem;
+	}
+	.center_holder {
+		padding: 0 2rem;
+	}
+	body {
+		font-size: 1.6rem;
+		&.fixed {
+			padding-right: 0;
+		}
+	}
+}
+@media screen and (min-width:768px) {
+	.mobile_visible {
+		display: none !important;
+	}
+}
+@media screen and (max-width:$point_3) {
+	#wrapper {
+		padding-top: 6rem;
+	}
+	body {
+		font-size: 1.5rem;
+	}
+	.mobile_hidden {
+		display: none !important;
+	}
+	.center_holder {
+		padding: 0 1.5rem;
+	}
+	#main {
+		padding-bottom: 1rem;
+	}
+}

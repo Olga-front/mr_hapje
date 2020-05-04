@@ -1,0 +1,60 @@
+include _global_vars
+
+mixin head(array)
+	meta(charset='UTF-8')
+	title!=array.title_inner
+	meta(name="viewport", content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(name="apple-mobile-web-app-capable" content="yes")
+	meta(name="mobile-web-app-capable" content="yes")
+	if production
+		meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+		meta(name="format-detection", content="telephone=no")
+		link(type="image/x-icon", rel="shortcut icon", href="favicon.ico")
+		link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+		link(rel="apple-touch-icon", href="apple-touch-icon.png")
+		link(rel="apple-touch-icon", sizes="57x57", href="apple-touch-icon-57x57.png")
+		link(rel="apple-touch-icon", sizes="72x72", href="apple-touch-icon-72x72.png")
+		link(rel="apple-touch-icon", sizes="76x76", href="apple-touch-icon-76x76.png")
+		link(rel="apple-touch-icon", sizes="114x114", href="apple-touch-icon-114x114.png")
+		link(rel="apple-touch-icon", sizes="120x120", href="apple-touch-icon-120x120.png")
+		link(rel="apple-touch-icon", sizes="144x144", href="apple-touch-icon-144x144.png")
+		link(rel="apple-touch-icon", sizes="152x152", href="apple-touch-icon-152x152.png")
+	link(rel="stylesheet" media="all" href="styles/main_global.css")
+
+mixin scripts
+	if jQuery
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-3.1.1.min.js"><\/script>')</script>
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	script(src="js/slick-lightbox.min.js")
+	script(src="js/modernizr.custom.js")
+	script(src="js/pathLoader.js")
+	script(src="js/all.js")
+	script(src='js/main.js')
+
+mixin loop_while(counter)
+	- i=0;
+	while i < counter
+		-i++;
+		block
+
+mixin loop_while_sub(counter)
+	- j = 0;
+		while j < counter
+			-j++;
+			block
+
+mixin main_menu(menuArray)
+	ul.main_menu_list(class="#{menuArray.mod}")
+		each item in menuArray.items
+			if item.active
+				li.main_menu_item.active_mod(class="#{menuArray.mod}")
+					a.main_menu_link(href="#" class="#{menuArray.mod}") #{item.title}
+			else
+				li.main_menu_item(class="#{menuArray.mod}")
+					a.main_menu_link(href="#" class="#{menuArray.mod}") #{item.title}
+
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="i/sprite/sprite.svg#" + name)

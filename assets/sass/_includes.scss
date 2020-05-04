@@ -1,0 +1,30 @@
+// variables,mixins,extends
+@import "helpers/helpers_all";
+
+// base
+@import "fonts";
+@import "base/base_reset";
+
+// icons
+@import "sprite";
+
+// plugins
+@import "plugins/slick";
+@import "plugins/magnific_popup";
+@import "plugins/aos";
+
+// elements
+@import "elements/form";
+@import "elements/headings";
+
+// blocks
+@import "blocks/popup";
+@import "blocks/loader";
+
+// layout parts
+@import "layout_parts/header";
+@import "layout_parts/layout";
+@import "layout_parts/footer";
+
+// pages
+@import "index";

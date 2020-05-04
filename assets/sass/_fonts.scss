@@ -1,0 +1,5 @@
+@include font_face('AvertaStdRegular','AvertaStd',$font_path,400);
+@include font_face('AvertaStdSemibold','AvertaStd',$font_path,600);
+@include font_face('AvertaStdBold','AvertaStd',$font_path,700);
+@include font_face('AvertaStdBlackItalic','AvertaStd',$font_path,900,italic);
+@include font_face('BlendaScript','BlendaScript',$font_path,400);

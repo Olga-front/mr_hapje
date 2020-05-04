@@ -1,0 +1,18 @@
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+//---------------------------------------------fonts
+$browser_context: 18;
+$font_path: "../fonts/";
+$main_font: 'AvertaStd',sans-serif;
+$font_size_base: 1.8rem;
+$line_height_base: 1.5;
+//---------------------------------------------colors
+$color_text-base: #000;
+$link_color: #c70b0b;
+$link_hover_color: saturate($link_color, 30%);
+//---------------------------------------------media points
+$point_1: 1244px;
+$point_2: 1023px;
+$point_3: 767px;
+$point_4: 480px;

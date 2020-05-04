@@ -1,0 +1,33 @@
+h1 {
+	font-size: em(66);
+	line-height: em(76, 66);
+	margin: 0 0 3rem;
+}
+h2 {
+	font-size: em(45);
+	line-height: em(45, 45);
+	margin-bottom: 1.6rem;
+}
+@media screen and (max-width:$point_2) {
+	h1 {
+		font-size: em(40);
+		line-height: em(48, 40);
+		max-width: 100%;
+		margin: 0 auto 2.5rem;
+	}
+	h2 {
+		font-size: em(36);
+		line-height: em(40, 36);
+	}
+}
+@media screen and (max-width:$point_3) {
+	h1 {
+		font-size: em(24,13);
+		line-height: em(28, 24);
+		margin: 0 auto 2.2rem;
+	}
+	h2 {
+		font-size: em(36);
+		line-height: em(40, 36);
+	}
+}

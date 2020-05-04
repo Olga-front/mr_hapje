@@ -1,0 +1,125 @@
+.contact {
+	form {
+		background-color: #f9e9ca;
+		max-width: 80rem;
+		margin: 0 auto;
+		padding: 4.2rem 10rem;
+	}
+}
+form {
+	text-align: center;
+	.input_holder {
+		margin-bottom: .9rem;
+		&:last-of-type {
+			margin-bottom: 5.9rem;
+		}
+	}
+}
+.form_control {
+	width: 100%;
+	border: solid #000;
+	border-width: 0 0 1px;
+	font: 600 em(20)/em(24) $main_font;
+	text-align: center;
+	height: 6.1rem;
+	position: relative;
+	display: block;
+	-webkit-appearance: none;
+	background: none;
+	&:focus + .input__label::after {
+		@include transform(translate3d(0, 0, 0))
+	}
+	&:focus {
+		& + .input__label {
+			font: 600 em(16)/em(20) $main_font;
+		}
+	}
+}
+textarea {
+	&.form_control {
+		margin-top: 1.8rem;
+		padding: 0 1.5rem;
+		height: 4.7rem;
+	}
+}
+.autosize {
+	resize: none;
+	overflow: hidden;
+}
+.hiddendiv {
+	display: none;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+.common {
+	min-height: 4.7rem;
+	overflow: hidden;
+}
+.lbr {
+	line-height: 3px;
+}
+.input_holder {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	color: #000;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font: 600 em(20)/em(24) $main_font;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 0.25em;
+	width: 100%;
+	height: calc(100% - 1.8rem);
+	pointer-events: none;
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 5px);
+		border-bottom: 1px solid transparent;
+	}
+	&::after {
+		border-bottom: 4px solid $link_color;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+		border-color: $link_color;
+	}
+}
+@media screen and (max-width:$point_3) {
+	.contact{
+		form{
+			margin: 0 -1.5rem;
+			padding: 3rem 2.5rem;
+		}
+	}
+	form {
+		.input_holder {
+			max-width: 48rem;
+			margin: 0 auto;
+			&:last-of-type {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+}

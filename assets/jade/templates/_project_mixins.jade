@@ -1,0 +1,43 @@
+mixin header
+	header#header
+		.center_holder
+			a.logo(href="#")
+				img(src="i/logo.svg" alt="Mr. Hapje" width="100" height="117")
+			a.phone(href="tel:0570763020").mobile_visible
+				+icon('phone','')
+				span.phone_number 0570 - 763020
+			a.popup-with-zoom-anim(href="#nav_popup").mobile_visible
+				span.burger_icon
+					span
+			#nav_popup.zoom-anim-dialog.mfp-hide
+				.mfp-close.icon_close.mobile_visible
+				.popup_default_frame
+					a.logo(href="#").mobile_visible
+						img(src="i/logo.svg" alt="Mr. Hapje" width="127" height="127")
+					ul#nav
+						li
+							a(href="#services") services
+								+icon('arrow_right','')
+						li
+							a(href="#menu") menu
+								+icon('arrow_right','')
+						li
+							a(href="#gallery") gallery
+								+icon('arrow_right','')
+						li
+							a(href="#contact") contact
+								+icon('arrow_right','')
+					.right_col
+						p
+							a.fc_link(href="https://www.facebook.com/" target="_blank") facebook
+						a.phone(href="tel:0570763020")
+							+icon('phone','')
+							span.phone_number 0570 - 763020
+mixin footer
+	footer#footer(data-aos="fade-up")
+		p.link_item
+			a(href="mailto:info@mrhapje.com") info@mrhapje.com
+		p.link_item
+			a(href="tel:0570763020") 0570 - 763020
+		p.link_item
+			a(href="#") facebook

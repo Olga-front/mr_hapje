@@ -1,0 +1,122 @@
+extends _layout
+include templates/_global_mixins
+include templates/_global_vars
+include templates/_project_mixins
+include templates/_project_vars
+block vars
+	- var array = {body_class:'', layuot_mod:'', sub_keywords:'',title_inner:'Mr. Hapje'};
+block content_block
+	.center_holder
+		section.intro
+			.text_holder#intro_text(data-aos="fade-right")
+				span.text_amp &amp;
+				h1 street food catering
+			.img_holder
+				img(src="i/intro_img.png" alt="Image description" data-aos="fade-left")
+		section.services#services
+			.about_area(data-aos="fade-up")
+				h2 who we are
+				p.
+					text about the company, clients, foods  text about the company, clients, foods  text about the company, clients, foods text about the company, clients, foods text about the company, clients, text about the company, clients, foods
+			.services_tabset(data-aos="fade-up")
+				ul
+					li.active
+						a(href="#festivals") festivals &amp; special events
+					li
+						a(href="#private_parties") private parties
+				div#festivals.active
+					p.
+						we believe that self-care should be an every day priority, but (thanks to social media) pampering and nourishing specifically on sunday seems to be the ‘it’ thing to do. regardless, we totally dig it. behold: some of our favorite ways to #selfcaresunday.
+				div#private_parties
+					p.
+						 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et cupiditate quae ab, ea nulla. Possimus debitis itaque, quis deleniti necessitatibus explicabo laudantium ab consectetur, autem! Quisquam tempore debitis nemo accusantium!
+		section.menu_section#menu
+			h1(data-aos="fade-up") menu
+			.menu_items
+				.menu_item
+					.menu_item_holder#menu_section_h2(data-aos="fade-right")
+						h2 pizza
+						p.
+							chicken kebab, salami, hawaii, margarita, gorgonzola
+						span.price from 7€
+					.img_holder.img_pizza(data-aos="fade-right" data-aos-duration="1000")
+						img(src="i/img_3.png" alt="Pizza")
+				.menu_item
+					.menu_item_frame(data-aos="fade-left")
+						.menu_item_holder
+							h2 hamburgers, hot&nbsp;dogs &amp; other
+							p.
+								just after the peak root veg season, and before the bountiful months of spring greens, March is sometimes called the ‘hungry gap’ by gardeners.
+							span.price from 7€
+					.img_holder
+						img(src="i/img_1.png" alt="Hamburger" class="img_burger")(data-aos="fade-left" data-aos-duration="1000")
+				.menu_item
+					.menu_item_holder(data-aos="fade-right")
+						h2 craft beer
+						p.
+							just after the peak root veg season, and before the bountiful months of spring greens, March is sometimes called the ‘hungry gap’ by gardeners
+						span.price from 7€
+					.img_holder
+						img(src="i/img_4.png" alt="Beer" class="img_beer_1")(data-aos="fade-right" data-aos-duration="1000")
+						img(src="i/img_4.png" alt="Beer" class="img_beer_2")(data-aos="fade-right" data-aos-duration="600")
+				.menu_item
+					.menu_item_holder(data-aos="fade-left")
+						h2 fries
+						p.
+							chicken kebab, margarita, hawaii, salami, gorgonzola
+						span.price from 7€
+					.img_holder
+						img(src="i/img_2.png" alt="Fries" class="img_fries_1")(data-aos="fade-left" data-aos-duration="800")
+		.book_text_area(data-aos="fade-up")
+			p.
+				book your next event with us
+			a.btn.btn_inverse(href="#contact") let’s talk!
+	section.gallery#gallery
+		.slick_gallery(data-aos="fade-up")
+			div
+				.img_holder
+					a(href="i/gallery_img_1.jpg" target="_blank")
+						img(src="i/gallery_img_1_thumb.jpg" alt="Image description")
+			div
+				.img_holder
+					a(href="i/gallery_img_2.jpg" target="_blank")
+						img(src="i/gallery_img_2_thumb.jpg" alt="Image description")
+			div
+				.img_holder
+					a(href="i/gallery_img_3.jpg" target="_blank")
+						img(src="i/gallery_img_3_thumb.jpg" alt="Image description")
+			div
+				.img_holder
+					a(href="i/gallery_img_4.jpg" target="_blank")
+						img(src="i/gallery_img_4.jpg" alt="Image description")
+			div
+				.img_holder
+					a(href="i/gallery_img_5.jpg" target="_blank")
+						img(src="i/gallery_img_5.jpg" alt="Image description")
+			div
+				.img_holder
+					a(href="i/gallery_img_6.jpg" target="_blank")
+						img(src="i/gallery_img_6.jpg" alt="Image description")
+			div
+				.img_holder
+					a(href="i/gallery_img_7.jpg" target="_blank")
+						img(src="i/gallery_img_7.jpg" alt="Image description")
+			div
+				.img_holder
+					a(href="i/gallery_img_3.jpg" target="_blank")
+						img(src="i/gallery_img_3.jpg" alt="Image description")
+	.center_holder
+		section.contact#contact
+			h1(data-aos="fade-up") contact
+			form(data-aos="fade-up")
+				fieldset
+					.input_holder
+						input.input__field.form_control(type="text" id="name" placeholder="name")
+						label.input__label(for="name")
+					.input_holder
+						input.input__field.form_control(type="email" id="email" placeholder="email" required)
+						label.input__label(for="email")
+					.input_holder
+						textarea.input__field.form_control(type="textarea" placeholder="message" class="form_control common" id="message" required)
+						label.input__label(for="message")
+					button.btn(type="submit") let’s talk!
